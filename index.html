@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Samurai Starter Protocol | Free 7-Day Home Training Plan | Samurai Mindset</title>
+<meta name="description" content="Get the free Samurai Starter Protocol: a 7-day, 10–15 minute per day, no-equipment home training PDF for strength, core, and discipline.">
+<meta property="og:title" content="Samurai Starter Protocol | Free 7-Day Home Training Plan">
+<meta property="og:description" content="A free 7-day, no-equipment home training PDF. 10–15 minutes a day.">
+<meta property="og:image" content="assets/og-hero.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:#F2EBDD;color:#111111;font-family:'Barlow',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+*{box-sizing:border-box}
+a{color:#111111;text-decoration:underline;text-underline-offset:3px}
+a:hover{color:#B5282E}
+:focus-visible{outline:3px solid #B5282E;outline-offset:3px}
+input::placeholder{color:#8a8478}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none !important;animation:none !important}}
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:#F2EBDD;color:#111111;">
+
+<!-- NAV -->
+<header style="position:sticky;top:0;z-index:50;transition:background .3s, padding .3s, border-color .3s;background:#111111;color:#F2EBDD;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #222222;">
+  <nav aria-label="Main navigation" style="max-width:1240px;margin:0 auto;padding:{{ navPad }} clamp(20px,5vw,48px);display:flex;align-items:center;justify-content:space-between;gap:20px;transition:padding .3s;">
+    <a href="#top" aria-label="Samurai Mindset home" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#F2EBDD;">
+      <span style="display:flex;align-items:baseline;gap:8px;">
+        <span style="font-family:Anton,sans-serif;font-size:22px;letter-spacing:.5px;line-height:1;">SAMURAI</span>
+        <span style="font-weight:600;font-size:11px;letter-spacing:4px;line-height:1;">MINDSET</span>
+      </span>
+    </a>
+    <sc-if value="{{ isWide }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;gap:32px;font-weight:500;font-size:15px;">
+        <a href="#icerik" style="text-decoration:none;color:#F2EBDD;" style-hover="color:#D9C7A3">Content</a>
+        <a href="#nasil" style="text-decoration:none;color:#F2EBDD;" style-hover="color:#D9C7A3">How It Works</a>
+        <a href="#sss" style="text-decoration:none;color:#F2EBDD;" style-hover="color:#D9C7A3">FAQ</a>
+      </div>
+    </sc-if>
+    <button onClick="{{ ctaNav }}" style="min-height:44px;padding:0 18px;border:1.5px solid #B5282E;background:transparent;color:#F2EBDD;font-family:Barlow,sans-serif;font-weight:700;font-size:14px;letter-spacing:1px;cursor:pointer;border-radius:2px;transition:background .2s;" style-hover="background:#B5282E">GET THE FREE PDF</button>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section aria-labelledby="hero-title" style="background:#111111;color:#F2EBDD;"><div style="max-width:1240px;margin:0 auto;padding:clamp(40px,7vw,96px) clamp(20px,5vw,48px) clamp(56px,8vw,112px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(40px,6vw,72px);align-items:center;">
+  <div style="display:flex;flex-direction:column;gap:24px;">
+    <span style="align-self:flex-start;background:#8E1F24;color:#F2EBDD;font-weight:700;font-size:12px;letter-spacing:2px;padding:7px 12px;border-radius:2px;">FREE 7-DAY HOME TRAINING PROTOCOL</span>
+    <h1 id="hero-title" style="margin:0;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(52px,8.4vw,104px);line-height:.95;letter-spacing:.5px;text-wrap:balance;">7 DAYS.<br>10 MINUTES.<br><span style="color:#B5282E;-webkit-text-stroke:0;">YOUR FIRST STEP.</span></h1>
+    <p style="margin:0;font-size:clamp(18px,2vw,21px);line-height:1.5;max-width:520px;font-weight:500;text-wrap:pretty;">Start training at home with a simple, no-equipment strength, core, and discipline protocol.</p>
+    <div style="display:flex;gap:14px;align-items:stretch;max-width:520px;">
+      <span aria-hidden="true" style="width:2px;background:linear-gradient(#B5282E,transparent);flex:none;"></span>
+      <p style="margin:0;font-size:16px;line-height:1.5;color:#D9C7A3;">If you do not know where to start, complete just the first level today.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px;align-items:flex-start;">
+      <button onClick="{{ ctaHero }}" style="min-height:56px;padding:0 32px;background:#B5282E;color:#F2EBDD;border:none;border-radius:2px;font-family:Barlow,sans-serif;font-weight:700;font-size:17px;letter-spacing:1.5px;cursor:pointer;box-shadow:0 10px 30px -10px rgba(181,40,46,.7);transition:transform .2s, background .2s;" style-hover="background:#C8323A;transform:translateY(-1px)">GET THE FREE PDF</button>
+      <span style="font-size:14px;color:#BDB4A3;">Enter your email and we’ll send the guide instantly.</span>
+    </div>
+  </div>
+
+  <div style="justify-self:center;width:100%;max-width:440px;display:flex;flex-direction:column;gap:16px;align-items:center;">
+    <div style="width:100%;aspect-ratio:1161/1654;border-radius:3px;overflow:hidden;background:#111111;box-shadow:0 40px 80px -30px rgba(0,0,0,1), 0 0 0 1px #262626;transform:perspective(1400px) rotateY(-8deg) rotateX(2deg);"><img src="assets/pdf-cover-clean.png" alt="Samurai Starter Protocol PDF cover" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+    <span style="font-size:13px;font-weight:700;letter-spacing:2px;color:#BDB4A3;">PDF · 7 DAYS · FREE</span>
+  </div>
+</div></section>
+
+<!-- PROBLEM -->
+<section aria-labelledby="problem-title" style="background:#8E1F24;color:#F2EBDD;">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(20px,5vw,48px);display:flex;flex-direction:column;gap:48px;">
+    <h2 id="problem-title" style="margin:0;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(36px,5.4vw,64px);line-height:1;max-width:820px;text-wrap:balance;">THE PROBLEM IS NOT MOTIVATION. <span style="color:#F2EBDD;opacity:.7;">IT IS NOT KNOWING WHERE TO START.</span></h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:20px;">
+      <sc-for list="{{ problems }}" as="p" hint-placeholder-count="3">
+        <div style="background:#F2EBDD;color:#111111;border:none;padding:28px;border-radius:3px;display:flex;flex-direction:column;gap:14px;">
+          <span style="font-family:Anton,sans-serif;font-size:15px;color:#8E1F24;letter-spacing:1px;">{{ p.n }}</span>
+          <h3 style="margin:0;font-size:22px;font-weight:700;line-height:1.2;">{{ p.title }}</h3>
+          <p style="margin:0;font-size:16px;line-height:1.5;color:#3a352d;">{{ p.text }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- 7 DAYS -->
+<section id="icerik" aria-labelledby="days-title" style="padding:clamp(64px,9vw,120px) 0 0;display:flex;flex-direction:column;gap:clamp(40px,6vw,72px);">
+  <div style="max-width:1240px;width:100%;margin:0 auto;padding:0 clamp(20px,5vw,48px);display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;">
+    <h2 id="days-title" style="margin:0;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(44px,8vw,112px);line-height:.95;max-width:900px;">WHAT WILL YOU DO IN 7 DAYS?</h2>
+    <span style="font-size:16px;font-weight:600;color:#3a352d;">10–15 minutes per day · no equipment required</span>
+  </div>
+  <div style="display:flex;flex-direction:column;">
+    <sc-for list="{{ days }}" as="d" hint-placeholder-count="7">
+      <article style="background:{{ d.txtBg }};color:{{ d.txtFg }};">
+        <div style="display:flex;flex-wrap:wrap;flex-direction:{{ d.dir }};align-items:stretch;">
+          <div style="flex:1 1 440px;min-width:0;aspect-ratio:4/3;max-height:640px;background:{{ d.imgBg }};position:relative;overflow:hidden;">
+            <sc-if value="{{ d.img }}" hint-placeholder-val="{{ false }}"><img src="{{ d.img }}" alt="{{ d.alt }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:clamp(16px,3vw,40px);mix-blend-mode:multiply;display:block;"></sc-if>
+          </div>
+          <div style="flex:1 1 320px;min-width:0;padding:clamp(28px,5vw,72px) clamp(20px,5vw,64px);display:flex;flex-direction:column;justify-content:center;gap:20px;">
+            <span style="display:flex;align-items:baseline;gap:14px;">
+              <span style="font-family:Anton,sans-serif;font-size:clamp(88px,12vw,180px);line-height:.8;color:{{ d.numFg }};">{{ d.nn }}</span>
+              <span style="font-size:13px;font-weight:700;letter-spacing:3px;">DAY</span>
+            </span>
+            <h3 style="margin:0;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(32px,4vw,52px);line-height:1;text-transform:uppercase;text-wrap:balance;">{{ d.title }}</h3>
+            <p style="margin:0;font-size:clamp(17px,1.6vw,20px);line-height:1.5;color:{{ d.subFg }};max-width:420px;">{{ d.text }}</p>
+          </div>
+        </div>
+      </article>
+    </sc-for>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="nasil" aria-labelledby="how-title" style="background:#111111;color:#F2EBDD;">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(20px,5vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:56px;align-items:start;">
+    <div style="display:flex;flex-direction:column;gap:20px;">
+      <h2 id="how-title" style="margin:0;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(36px,5.4vw,64px);line-height:1;">THE SAMURAI PROTOCOL IN 3 STEPS</h2>
+      <p style="margin:0;font-size:17px;line-height:1.55;max-width:420px;color:#BDB4A3;">No preparation. No equipment. Just an email address and a few minutes each day.</p>
+    </div>
+    <ol style="list-style:none;margin:0;padding:0;position:relative;display:flex;flex-direction:column;gap:36px;">
+      <span aria-hidden="true" style="position:absolute;left:23px;top:24px;bottom:24px;width:2px;background:#F2EBDD;opacity:.35;"></span>
+      <sc-for list="{{ steps }}" as="s" hint-placeholder-count="3">
+        <li style="display:flex;gap:24px;align-items:flex-start;position:relative;">
+          <span style="flex:none;width:48px;height:48px;border-radius:50%;background:#8E1F24;color:#F2EBDD;display:grid;place-items:center;font-family:Anton,sans-serif;font-size:20px;box-shadow:0 0 0 6px #111111;">{{ s.n }}</span>
+          <div style="display:flex;flex-direction:column;gap:6px;padding-top:4px;">
+            <h3 style="margin:0;font-size:22px;font-weight:700;">{{ s.title }}</h3>
+            <p style="margin:0;font-size:16px;line-height:1.5;color:#BDB4A3;">{{ s.text }}</p>
+          </div>
+        </li>
+      </sc-for>
+    </ol>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section aria-labelledby="ben-title" style="max-width:1240px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(20px,5vw,48px);display:flex;flex-direction:column;gap:48px;">
+  <h2 id="ben-title" style="margin:0;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(36px,5.4vw,64px);line-height:1;">MORE THAN A WORKOUT PLAN</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));border-top:1px solid #111111;border-left:1px solid #111111;">
+    <sc-for list="{{ benefits }}" as="b" hint-placeholder-count="6">
+      <div style="padding:28px;border-right:1px solid #111111;border-bottom:1px solid #111111;display:flex;gap:16px;align-items:flex-start;">
+        <span aria-hidden="true" style="flex:none;width:20px;height:20px;border-radius:50%;border:2px solid #B5282E;display:grid;place-items:center;margin-top:3px;"><span style="width:6px;height:6px;border-radius:50%;background:#B5282E;"></span></span>
+        <span style="font-size:18px;font-weight:600;line-height:1.4;">{{ b }}</span>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- PREVIEW -->
+<section aria-labelledby="prev-title" style="background:#F2EBDD;color:#111111;border-top:1.5px solid #111111;">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(20px,5vw,48px);display:flex;flex-direction:column;gap:48px;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;">
+      <h2 id="prev-title" style="margin:0;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(36px,5.4vw,64px);line-height:1;">WHAT IS INSIDE THE PDF?</h2>
+      <span style="font-size:15px;color:#3a352d;">A practical 7-day starting system for strength, core, and discipline.</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:24px;">
+
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;">
+        <div style="aspect-ratio:1161/1654;border-radius:2px;box-shadow:0 20px 40px -18px rgba(0,0,0,.55);overflow:hidden;background:#111111;"><img src="assets/pdf-cover-clean.png" alt="Samurai Starter Protocol PDF cover page" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+        <figcaption style="font-size:14px;font-weight:600;">Cover</figcaption>
+      </figure>
+
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;">
+        <div style="aspect-ratio:1/1.414;border-radius:2px;box-shadow:0 20px 40px -18px rgba(0,0,0,.45);overflow:hidden;background:#F2EBDD;border:1.5px solid #111111;"><img src="assets/pdf-page-day3.png" alt="PDF page: Day 3 squat foundation training plan" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+        <figcaption style="font-size:14px;font-weight:600;">Daily Training Plan</figcaption>
+      </figure>
+
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;">
+        <div style="aspect-ratio:1/1.414;border-radius:2px;box-shadow:0 20px 40px -18px rgba(0,0,0,.45);overflow:hidden;background:#F2EBDD;border:1.5px solid #111111;"><img src="assets/pdf-page-manifesto.png" alt="PDF page: Samurai Mindset manifesto" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+        <figcaption style="font-size:14px;font-weight:600;">Manifesto</figcaption>
+      </figure>
+
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px;">
+        <div style="aspect-ratio:1/1.414;border-radius:2px;box-shadow:0 20px 40px -18px rgba(0,0,0,.45);overflow:hidden;background:#F2EBDD;border:1.5px solid #111111;"><img src="assets/pdf-page-tracker.png" alt="PDF page: 7-day progress tracker" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+        <figcaption style="font-size:14px;font-weight:600;">Progress Tracker</figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section id="form" aria-labelledby="form-title" style="background:#111111;color:#F2EBDD;"><div style="max-width:1240px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(20px,5vw,48px);">
+  <div ref="{{ formRef }}" style="background:#111111;border:1px solid #2E2E2E;border-top:4px solid #B5282E;border-radius:3px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));overflow:hidden;">
+    <div style="padding:clamp(28px,5vw,56px);display:flex;flex-direction:column;gap:20px;justify-content:center;">
+      <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+        <h2 id="form-title" style="margin:0;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(36px,5vw,56px);line-height:1;">START YOUR FIRST DAY TODAY</h2>
+        <p style="margin:0;font-size:17px;line-height:1.55;color:#D9C7A3;max-width:440px;">Leave your email address to receive the Samurai Starter Protocol for free.</p>
+        <form noValidate="{{ true }}" onSubmit="{{ onSubmit }}" style="display:flex;flex-direction:column;gap:16px;margin-top:8px;max-width:460px;">
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <label for="lead-email" style="font-size:14px;font-weight:600;">Email address</label>
+            <input id="lead-email" ref="{{ emailRef }}" type="email" autoComplete="email" inputMode="email" placeholder="you@example.com" value="{{ email }}" onChange="{{ onEmail }}" onFocus="{{ onStart }}" aria-invalid="{{ emailInvalid }}" aria-describedby="email-error" style="min-height:52px;padding:0 16px;background:#111111;border:1.5px solid {{ emailBorder }};border-radius:2px;color:#F2EBDD;font-family:Barlow,sans-serif;font-size:17px;">
+            <span id="email-error" role="alert" style="font-size:14px;color:#FF8A8A;min-height:0;">{{ error }}</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <label for="lead-name" style="font-size:14px;font-weight:600;">Name <span style="font-weight:400;color:#BDB4A3;">(optional)</span></label>
+            <input id="lead-name" type="text" autoComplete="given-name" placeholder="Your name" value="{{ name }}" onChange="{{ onName }}" onFocus="{{ onStart }}" style="min-height:52px;padding:0 16px;background:#111111;border:1.5px solid #3A3A3A;border-radius:2px;color:#F2EBDD;font-family:Barlow,sans-serif;font-size:17px;">
+          </div>
+          <button type="submit" style="min-height:56px;background:#B5282E;color:#F2EBDD;border:none;border-radius:2px;font-family:Barlow,sans-serif;font-weight:700;font-size:17px;letter-spacing:1.5px;cursor:pointer;margin-top:4px;" style-hover="background:#C8323A">{{ submitLabel }}</button>
+          <span style="font-size:13px;color:#BDB4A3;">No spam. Unsubscribe anytime.</span>
+        </form>
+      </sc-if>
+      <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+        <span aria-hidden="true" style="width:56px;height:56px;border-radius:50%;border:2px solid #B8E986;display:grid;place-items:center;"><span style="width:16px;height:16px;border-radius:50%;background:#B8E986;"></span></span>
+        <h2 id="form-title" tabIndex="-1" ref="{{ successRef }}" style="margin:0;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(36px,5vw,56px);line-height:1;">WELCOME TO SAMURAI MINDSET.</h2>
+        <p role="status" style="margin:0;font-size:17px;line-height:1.55;color:#D9C7A3;max-width:440px;">Your 7-day starting protocol is ready. Check your inbox to begin.</p>
+        <a href="#icerik" style="align-self:flex-start;min-height:52px;padding:0 24px;display:inline-flex;align-items:center;border:1.5px solid #F2EBDD;border-radius:2px;color:#F2EBDD;text-decoration:none;font-weight:700;letter-spacing:1.5px;font-size:15px;">VIEW THE PROGRAM</a>
+        <span style="font-size:12px;color:#8a8478;">Demo mode: no email is sent yet.</span>
+      </sc-if>
+    </div>
+    <div style="background:#F2EBDD;min-height:320px;position:relative;">
+      <img src="assets/form-character.png" alt="Samurai Mindset masked character gesturing toward the form" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center bottom;padding:24px 16px 0;mix-blend-mode:multiply;transform:scaleX(-1);">
+    </div>
+  </div>
+</div></section>
+
+<!-- PAID TEASER -->
+<section aria-labelledby="paid-title" style="max-width:1240px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(20px,5vw,48px) 0;">
+  <div style="border:1.5px solid #111111;border-radius:3px;padding:clamp(28px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:32px;align-items:center;">
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <span style="font-size:12px;font-weight:700;letter-spacing:2px;color:#8E1F24;">AFTER THE FIRST 7 DAYS</span>
+      <h2 id="paid-title" style="margin:0;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(28px,3.6vw,40px);line-height:1;">SAMURAI HOME ARMOR</h2>
+      <span style="font-size:18px;font-weight:600;color:#3a352d;">A 4-WEEK AT-HOME STRENGTH PROGRAM</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px;align-items:flex-start;">
+      <p style="margin:0;font-size:16px;line-height:1.55;color:#3a352d;">After completing the first week, continue with four focused training days per week, three difficulty levels, and a clear progression system.</p>
+      <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap;">
+        <button onClick="{{ onPaid }}" style="min-height:48px;padding:0 20px;background:transparent;border:1.5px solid #111111;color:#111111;border-radius:2px;font-family:Barlow,sans-serif;font-weight:700;font-size:14px;letter-spacing:1.5px;cursor:pointer;" style-hover="background:#111111;color:#F2EBDD">EXPLORE THE NEXT PROGRAM</button>
+        <span style="font-size:13px;font-weight:700;letter-spacing:1.5px;color:#B5282E;">COMING SOON</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="sss" aria-labelledby="faq-title" style="background:#F2EBDD;color:#111111;">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(20px,5vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:48px;align-items:start;">
+    <h2 id="faq-title" style="margin:0;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(36px,5.4vw,64px);line-height:1;">FREQUENTLY ASKED QUESTIONS</h2>
+    <div style="display:flex;flex-direction:column;border-top:1.5px solid #111111;grid-column:span 1;">
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="7">
+        <div style="border-bottom:1px solid #b7a684;">
+          <h3 style="margin:0;">
+            <button onClick="{{ f.toggle }}" aria-expanded="{{ f.open }}" aria-controls="{{ f.id }}" style="width:100%;min-height:60px;display:flex;justify-content:space-between;align-items:center;gap:16px;background:transparent;border:none;padding:16px 0;text-align:left;font-family:Barlow,sans-serif;font-size:18px;font-weight:700;color:#111111;cursor:pointer;">
+              <span>{{ f.q }}</span>
+              <span aria-hidden="true" style="flex:none;width:28px;height:28px;border-radius:50%;background:{{ f.iconBg }};color:#F2EBDD;display:grid;place-items:center;font-size:18px;line-height:1;transition:background .2s;">{{ f.icon }}</span>
+            </button>
+          </h3>
+          <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+            <p id="{{ f.id }}" style="margin:0;padding:0 44px 20px 0;font-size:16px;line-height:1.55;color:#3a352d;">{{ f.a }}</p>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section aria-labelledby="final-title" style="background:#8E1F24;">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(64px,9vw,112px) clamp(20px,5vw,48px);display:flex;flex-direction:column;gap:24px;align-items:flex-start;">
+    <h2 id="final-title" style="margin:0;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(40px,6.4vw,84px);line-height:.98;max-width:900px;text-wrap:balance;color:#F2EBDD;">COMPLETE YOUR FIRST LEVEL TODAY.</h2>
+    <p style="margin:0;font-size:clamp(17px,2vw,20px);line-height:1.5;max-width:560px;color:#F2EBDD;">Get the free 7-day starting protocol and build your own daily discipline.</p>
+    <button onClick="{{ ctaFinal }}" style="min-height:56px;padding:0 28px;background:#F2EBDD;color:#111111;border:none;border-radius:2px;font-family:Barlow,sans-serif;font-weight:700;font-size:16px;letter-spacing:1.5px;cursor:pointer;margin-top:8px;" style-hover="background:#FFFFFF">GET THE FREE STARTER PROTOCOL</button>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer style="max-width:1240px;margin:0 auto;padding:56px clamp(20px,5vw,48px) {{ footerPadBottom }};display:flex;flex-direction:column;gap:32px;">
+  <div style="display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:flex-start;">
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <span style="display:flex;flex-direction:column;gap:4px;">
+        <span style="font-family:Anton,sans-serif;font-size:30px;line-height:1;">SAMURAI</span>
+        <span style="font-weight:600;font-size:12px;letter-spacing:6px;">MINDSET</span>
+      </span>
+      <span style="font-size:13px;font-weight:700;letter-spacing:2px;color:#B5282E;">SAVE. TRAIN. GROW.</span>
+    </div>
+    <div style="display:flex;gap:24px;flex-wrap:wrap;font-size:15px;">
+      <a href="https://instagram.com/samuraimindset" target="_blank" rel="noopener">@samuraimindset</a>
+      <a href="#privacy">Privacy Policy</a>
+      <a href="#terms">Terms of Use</a>
+    </div>
+  </div>
+  <p style="margin:0;padding-top:24px;border-top:1px solid #111111;font-size:13px;color:#3a352d;">This content is for general educational purposes and is not medical advice.</p>
+</footer>
+
+<!-- MOBILE STICKY CTA -->
+<sc-if value="{{ showBar }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(17,17,17,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid #2E2E2E;display:flex;gap:12px;align-items:center;">
+    <span style="flex:1;font-size:13px;line-height:1.3;color:#D9C7A3;">7-day PDF guide<br><span style="color:#F2EBDD;font-weight:700;">Free</span></span>
+    <button onClick="{{ ctaBar }}" style="min-height:48px;padding:0 20px;background:#B5282E;color:#F2EBDD;border:none;border-radius:2px;font-family:Barlow,sans-serif;font-weight:700;font-size:15px;letter-spacing:1px;cursor:pointer;">GET THE FREE PDF</button>
+  </div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+// ---- Analytics placeholder: wire to GA4 / Meta Pixel / Plausible later ----
+function track(event, data) {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event, ...(data || {}) });
+  console.info('[analytics]', event, data || '');
+}
+
+// ---- Email submit: isolated demo handler ----
+// TODO: connect email provider and PDF delivery endpoint
+async function submitLead({ email, name }) {
+  return { ok: true, demo: true };
+}
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+const DAYS = [
+  ['CORE ACTIVATION', 'Wake up your trunk with a short plank and controlled breathing.', 'assets/day-1.png', 'Samurai Mindset masked character holding a forearm plank'],
+  ['PUSH-UP FOUNDATION', 'Find the push-up variation that matches your current level.', 'assets/day-2.png', 'Samurai Mindset masked character doing an incline push-up'],
+  ['SQUAT FOUNDATION', 'Build a strong squat with controlled depth and stable knee alignment.', 'assets/day-3.png', 'Samurai Mindset masked character in a bodyweight squat'],
+  ['ACTIVE RECOVERY & MOBILITY', 'Use simple mobility movements for your hips, shoulders, and back.', 'assets/day-4.png', 'Samurai Mindset masked character doing a shoulder stretch'],
+  ['AT-HOME CORE PROTOCOL', 'A short, controlled core session that does not strain your lower back.', 'assets/day-5.png', 'Samurai Mindset masked character doing a dead bug core exercise'],
+  ['FULL-BODY SAMURAI CIRCUIT', 'Combine the movements from the first five days into one full-body circuit.', 'assets/day-6.png', 'Samurai Mindset masked character standing with arms raised overhead'],
+  ['LEVEL TEST & NEXT STEP', 'Compare your progress with Day 1 and choose your next step.', 'assets/day-7.png', 'Samurai Mindset masked character giving a thumbs up'],
+];
+
+const FAQS = [
+  ['Who is the PDF for?', 'It is designed for beginners who want a clear and simple way to start training at home.'],
+  ['Do I need any equipment?', 'No. The program is designed to be completed without equipment.'],
+  ['How long does each session take?', 'Most sessions take approximately 10–15 minutes.'],
+  ['Can complete beginners follow it?', 'Yes. Each movement includes a beginner-friendly variation.'],
+  ['What if I feel pain?', 'Stop the movement and consult a qualified professional if pain continues. This guide is for general educational purposes and is not medical advice.'],
+  ['When will I receive the PDF?', 'The PDF should arrive by email after submitting the form.'],
+  ['Is the next program paid?', 'The Samurai Home Armor program will be a separate paid program and will be announced when available.'],
+];
+
+class Component extends DCLogic {
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1280, scrolled: false, scrollY: 0, formInView: false,
+    email: '', name: '', error: '', submitted: false, started: false, sending: false, openFaq: 0 };
+  formRef = React.createRef();
+  emailRef = React.createRef();
+  successRef = React.createRef();
+
+  componentDidMount() {
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    this.onScroll = () => {
+      const y = window.scrollY;
+      if ((y > 24) !== this.state.scrolled || Math.abs(y - this.state.scrollY) > 80) this.setState({ scrolled: y > 24, scrollY: y });
+    };
+    window.addEventListener('resize', this.onResize);
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    if (this.formRef.current && 'IntersectionObserver' in window) {
+      this.io = new IntersectionObserver(([e]) => this.setState({ formInView: e.isIntersecting }), { threshold: 0.15 });
+      this.io.observe(this.formRef.current);
+    }
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+    window.removeEventListener('scroll', this.onScroll);
+    this.io && this.io.disconnect();
+  }
+
+  goForm(source) {
+    if (source === 'hero') track('hero_cta_click');
+    else track('cta_click', { source });
+    const el = document.getElementById('form');
+    if (!el) return;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 70, behavior: reduce ? 'auto' : 'smooth' });
+    setTimeout(() => this.emailRef.current && this.emailRef.current.focus({ preventScroll: true }), reduce ? 0 : 600);
+  }
+
+  async handleSubmit(e) {
+    e.preventDefault();
+    const email = this.state.email.trim();
+    if (!email) return this.setState({ error: 'Please enter your email address.' }, () => this.emailRef.current && this.emailRef.current.focus());
+    if (!EMAIL_RE.test(email)) return this.setState({ error: 'This email address does not look valid. Please check it.' }, () => this.emailRef.current && this.emailRef.current.focus());
+    this.setState({ error: '', sending: true });
+    track('lead_form_submit', { has_name: !!this.state.name.trim() });
+    await submitLead({ email, name: this.state.name.trim() });
+    this.setState({ submitted: true, sending: false }, () => {
+      track('pdf_success_view');
+      this.successRef.current && this.successRef.current.focus();
+    });
+  }
+
+  renderVals() {
+    const s = this.state;
+    const isWide = s.w >= 860;
+    const showBar = !isWide && s.scrollY > 520 && !s.formInView && !s.submitted;
+    return {
+      isWide, showBar,
+      navBg: s.scrolled ? 'rgba(17,17,17,0.82)' : 'rgba(17,17,17,0)',
+      navBorder: s.scrolled ? '#262626' : 'transparent',
+      navPad: s.scrolled ? '10px' : '18px',
+      footerPadBottom: isWide ? '48px' : '110px',
+      ctaNav: () => this.goForm('nav'),
+      ctaHero: () => this.goForm('hero'),
+      ctaFinal: () => this.goForm('final'),
+      ctaBar: () => this.goForm('mobile_bar'),
+      onPaid: () => track('paid_program_click'),
+      problems: [
+        { n: '01', title: 'You do not know what to do', text: 'Replace random workouts with a clear sequence.' },
+        { n: '02', title: 'You do not have time for long workouts', text: 'Train for 10–15 minutes a day.' },
+        { n: '03', title: 'You cannot find a plan that fits your level', text: 'Use beginner, intermediate, and advanced variations.' },
+      ],
+      days: DAYS.map(([title, text, img, alt, mode], i) => ({ n: i + 1, nn: String(i + 1).padStart(2, '0'), dir: i % 2 ? 'row-reverse' : 'row', ...[
+          { txtBg: '#D9C7A3', txtFg: '#111111', subFg: '#3a352d', numFg: '#8E1F24', imgBg: '#D9C7A3' },
+          { txtBg: '#111111', txtFg: '#F2EBDD', subFg: '#BDB4A3', numFg: '#B5282E', imgBg: '#F2EBDD' },
+          { txtBg: '#8E1F24', txtFg: '#F2EBDD', subFg: '#F2EBDD', numFg: '#F2EBDD', imgBg: '#F2EBDD' },
+        ][i % 3], title, text, img, alt,
+        fit: mode === 'full' ? 'cover' : 'contain', blend: mode === 'full' ? 'normal' : 'multiply', pad: mode === 'full' ? '0' : '10px 12px 6px' })),
+      steps: [
+        { n: 1, title: 'GET THE PDF', text: 'Leave your email address and receive the free guide.' },
+        { n: 2, title: 'COMPLETE YOUR FIRST LEVEL', text: 'Train for 10–15 minutes each day.' },
+        { n: 3, title: 'TRACK YOUR PROGRESS', text: 'Review your level on Day 7 and continue with a clear plan.' },
+      ],
+      benefits: ['Start at home with no equipment.', 'Use simple variations for every level.', 'Complete short 10–15 minute sessions.', 'Follow clear sets, reps, timing, and rest instructions.', 'Track your daily progress.', 'Get a simple 30-day continuation recommendation.'],
+      faqs: FAQS.map(([q, a], i) => ({
+        q, a, id: 'faq-' + i, open: s.openFaq === i,
+        icon: s.openFaq === i ? '−' : '+', iconBg: s.openFaq === i ? '#B5282E' : '#111111',
+        toggle: () => this.setState({ openFaq: s.openFaq === i ? -1 : i }),
+      })),
+      formRef: this.formRef, emailRef: this.emailRef, successRef: this.successRef,
+      email: s.email, name: s.name, error: s.error,
+      emailInvalid: !!s.error, emailBorder: s.error ? '#FF8A8A' : '#3A3A3A',
+      submitted: s.submitted, notSubmitted: !s.submitted,
+      submitLabel: s.sending ? 'SENDING…' : 'SEND ME THE PDF',
+      onEmail: e => this.setState({ email: e.target.value, error: '' }),
+      onName: e => this.setState({ name: e.target.value }),
+      onStart: () => { if (!s.started) { this.setState({ started: true }); track('lead_form_start'); } },
+      onSubmit: e => this.handleSubmit(e),
+    };
+  }
+}
+</script>
+</body>
+</html>
