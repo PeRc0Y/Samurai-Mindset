@@ -307,10 +307,15 @@ function track(event, data) {
   console.info('[analytics]', event, data || '');
 }
 
-// ---- Email submit: isolated demo handler ----
-// TODO: connect email provider and PDF delivery endpoint
 async function submitLead({ email, name }) {
-  return { ok: true, demo: true };
+  const response = await fetch('/api/subscribe', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, name }),
+  });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || !data.ok) throw new Error(data.error || 'Subscription failed.');
+  return data;
 }
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -378,7 +383,12 @@ class Component extends DCLogic {
     if (!EMAIL_RE.test(email)) return this.setState({ error: 'This email address does not look valid. Please check it.' }, () => this.emailRef.current && this.emailRef.current.focus());
     this.setState({ error: '', sending: true });
     track('lead_form_submit', { has_name: !!this.state.name.trim() });
-    await submitLead({ email, name: this.state.name.trim() });
+    try {
+      await submitLead({ email, name: this.state.name.trim() });
+    } catch (error) {
+      this.setState({ error: error.message || 'Something went wrong. Please try again.', sending: false });
+      return;
+    }
     this.setState({ submitted: true, sending: false }, () => {
       track('pdf_success_view');
       this.successRef.current && this.successRef.current.focus();
