@@ -27,19 +27,30 @@ export default async function handler(request) {
     return json({ ok: false, error: 'Please enter a valid email address.' }, 400);
   }
 
-  const response = await fetch(MAILERLITE_API_URL, {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${token}`,
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-    },
-    body: JSON.stringify({
-      email,
-      fields: name ? { name } : {},
-      groups: [groupId],
-    }),
-  });
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 10000);
+  let response;
+  try {
+    response = await fetch(MAILERLITE_API_URL, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify({
+        email,
+        fields: name ? { name } : {},
+        groups: [groupId],
+      }),
+      signal: controller.signal,
+    });
+  } catch (error) {
+    console.error('MailerLite request failed', error);
+    return json({ ok: false, error: 'Email service is unavailable. Please try again.' }, 502);
+  } finally {
+    clearTimeout(timeout);
+  }
 
   if (!response.ok) {
     const details = await response.text();
